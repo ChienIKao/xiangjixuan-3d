@@ -128,8 +128,10 @@ npm run build
 
 ## 部署
 
-網址：<https://chienikao.github.io/xiangjixuan-3d/>
+網址：<https://xiangjixuan-3d.pages.dev/>（Cloudflare Pages）
 
-推送到 `main` 後，GitHub Actions（`.github/workflows/deploy.yml`）會自動執行內容檢查、建置，並發布到 GitHub Pages，約一兩分鐘後網址就會更新。
+Cloudflare Pages 連結了這個 GitHub repo：推送到 `main` 後，Cloudflare 會在雲端執行 `npm run build`（環境變數 `NODE_VERSION=22`），把 `dist` 發布出去，約一分鐘後網址就會更新。設定在 Cloudflare 後台 Workers & Pages → `xiangjixuan-3d`。
+
+另有 GitHub Pages 備用網址 <https://chienikao.github.io/xiangjixuan-3d/>，由 `.github/workflows/deploy.yml` 同步發布。
 
 也可以將 `dist/index.html` 放到 Cloudflare Pages 或任何靜態空間即可。使用既有建置流程時，建置指令是 `npm run build`，發布目錄是 `dist`。也可直接複製 HTML 到隨身碟，完全離線開啟。
