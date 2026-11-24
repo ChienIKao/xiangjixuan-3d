@@ -1,0 +1,20 @@
+{
+  "name": "xiangjixuan-3d",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "項脊軒志 互動式 3D 教學網頁",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "check": "node scripts/check-content.mjs"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.8",
+    "vite-plugin-singlefile": "^2.3.4"
+  }
+}
